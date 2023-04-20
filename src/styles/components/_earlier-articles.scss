@@ -1,0 +1,121 @@
+@use '../variables/colors.scss' as colors;
+@use '../variables/spacing.scss' as spacing;
+
+.earlier-articles {
+  width: 65%;
+  margin: spacing.$base-margin * 3 auto;
+}
+
+.earlier-articles h3 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: spacing.$base-padding * 2 0;
+  color: colors.$color-white;
+  letter-spacing: spacing.$letter-space;
+}
+
+.articles-wrapper {
+  display: grid;
+  gap: 1em;
+  grid-template-areas:
+    'article1 article1 article1 article2 article2 article2'
+    'article3 article3 article4 article4 article5 article5';
+}
+
+.article__container {
+  height: 100%;
+  padding: spacing.$base-padding * 3;
+  border-radius: spacing.$border-radius;
+}
+
+.earlier-articles__articles-wrapper__article {
+  min-height: 450px;
+  max-height: 600px;
+  color: colors.$primary-background;
+  border-radius: spacing.$border-radius;
+}
+
+.earlier-articles__articles-wrapper__article:nth-child(1) {
+  grid-area: article1;
+  background: url('../../../assets/museum.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.earlier-articles__articles-wrapper__article:nth-child(1) .article__container {
+  background-color: rgba($color: colors.$color-pink, $alpha: 0.8);
+}
+
+.earlier-articles__articles-wrapper__article:nth-child(2) {
+  grid-area: article2;
+  background: url('../../../assets/restaurant3.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.earlier-articles__articles-wrapper__article:nth-child(2) .article__container {
+  background-color: rgba($color: colors.$color-orange, $alpha: 0.8);
+}
+
+.earlier-articles__articles-wrapper__article:nth-child(3) {
+  grid-area: article3;
+  background: url('../../../assets/furniture.jpg');
+  background-position: center;
+  background-size: cover;
+  color: colors.$color-white;
+}
+.earlier-articles__articles-wrapper__article:nth-child(4) {
+  grid-area: article4;
+  background: url('../../../assets/livingroom.webp');
+  background-position: center;
+  background-size: cover;
+}
+
+.earlier-articles__articles-wrapper__article:nth-child(4) .article__container {
+  background-color: rgba($color: colors.$color-orange, $alpha: 0.8);
+}
+
+.earlier-articles__articles-wrapper__article:nth-child(5) {
+  grid-area: article5;
+  background: url('../../../assets/cafe.jpeg');
+  background-position: center;
+  background-size: cover;
+  color: colors.$color-white;
+}
+
+.earlier__article__blobs {
+  display: flex;
+  gap: 1em;
+  margin-bottom: spacing.$base-margin;
+  font-size: 0.8em;
+}
+
+.earlier__article__blobs .blob {
+  border: 1px solid white;
+  padding: spacing.$base-padding * 0.3 spacing.$base-padding;
+  border-radius: spacing.$border-radius;
+  font-weight: bold;
+}
+
+.dark {
+  color: colors.$primary-background;
+}
+
+.dark .blob {
+  border: 1px solid colors.$primary-background;
+}
+
+.earlier-articles__title {
+  font-size: 1em;
+  font-weight: 800;
+  margin: spacing.$base-margin 0;
+}
+
+.earlier-articles__description {
+  font-size: 1.5em;
+  margin: spacing.$base-margin 0;
+}
+
+.earlier-articles__author {
+  font-size: 1.3em;
+  margin: spacing.$base-margin 0;
+}

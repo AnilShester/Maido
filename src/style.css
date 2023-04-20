@@ -1,0 +1,332 @@
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 5em;
+}
+
+.header__nav img {
+  height: 2.5em;
+}
+
+.header__nav__ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  list-style-type: none;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #ebebeb;
+  letter-spacing: 0.05em;
+}
+
+.main {
+  display: grid;
+  gap: 1em;
+  width: 80%;
+  margin: 4em auto;
+  grid-template-areas: "item1 item1 item2 item3" "item1 item1 item4 item5";
+}
+
+.main__article__container {
+  height: 100%;
+  padding: 2em;
+  border-radius: 1.5em;
+  color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main__article:nth-child(1) {
+  grid-area: item1;
+  background: url(../assets/livingroom.webp);
+  background-position: center;
+  background-size: cover;
+}
+
+.main__article:nth-child(2) {
+  grid-area: item2;
+  background: url(../assets/basketball.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.main__article:nth-child(3) {
+  grid-area: item3;
+  background: url(../assets/workspace.webp);
+  background-position: top;
+  background-size: cover;
+}
+
+.main__article:nth-child(4) {
+  grid-area: item4;
+  background: url(../assets/furniture.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.main__article:nth-child(5) {
+  grid-area: item5;
+  background: url(../assets/museum.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.main__article:nth-child(2) .main__article__container {
+  background-color: rgba(20, 35, 255, 0.8);
+}
+
+.main__article:nth-child(3) .main__article__container {
+  background-color: rgba(255, 180, 105, 0.8);
+}
+
+.main__article:nth-child(4) .main__article__container {
+  background-color: rgba(119, 0, 143, 0.8);
+}
+
+.main__article:nth-child(5) .main__article__container {
+  background-color: rgba(255, 158, 216, 0.8);
+}
+
+.main__article {
+  min-height: 250px;
+  border-radius: 1.5em;
+}
+
+.main__article__pinned {
+  padding: 0.7em 1.5em;
+  color: #3e3e5f;
+  background-color: #ffffff;
+  font-size: 0.7em;
+  width: fit-content;
+  border-radius: 1.5em;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+.main__article__author {
+  font-size: 1.1em;
+  visibility: hidden;
+}
+
+.main__article__title {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.main__article:hover {
+  transform: translate(0, -5px);
+  transition: 0.2s ease-in-out;
+}
+
+.section-1,
+.section-2,
+.section-3 {
+  width: 65%;
+  height: 800px;
+  margin: 3em auto;
+  border-radius: 1.5em;
+  background-position: center;
+  background-size: cover;
+}
+
+.section-1 {
+  background-image: url("../../../assets/office.webp");
+  color: #ffffff;
+}
+
+.section-2 {
+  background-image: url("../../../assets/restaurant3.jpg");
+  color: #252530;
+}
+
+.section-3 {
+  background-image: url("../../../assets/furniture.jpg");
+  color: #ffffff;
+}
+
+.section-1__article,
+.section-2__article,
+.section-3__article {
+  height: 100%;
+  border-radius: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-2__article {
+  background-color: rgba(254, 214, 114, 0.8);
+}
+
+.section__article__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 70%;
+}
+
+.section-1__articles__blobs,
+.section-2__articles__blobs,
+.section-3__articles__blobs {
+  display: flex;
+  gap: 1em;
+}
+
+.section-1__articles__blobs div,
+.section-2__articles__blobs div,
+.section-3__articles__blobs div {
+  padding: 0.5em 1em;
+  border-radius: 1.5em;
+  font-weight: bold;
+}
+
+.section-1__articles__blobs div,
+.section-3__articles__blobs div {
+  border: 1px solid #ffffff;
+}
+
+.section-2__articles__blobs div {
+  border: 1px solid #252530;
+}
+
+.section__article__head {
+  font-size: 3.5em;
+  font-weight: 800;
+}
+
+.section__article__author {
+  font-size: 1.5em;
+}
+
+.earlier-articles {
+  width: 65%;
+  margin: 3em auto;
+}
+
+.earlier-articles h3 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2em 0;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+}
+
+.articles-wrapper {
+  display: grid;
+  gap: 1em;
+  grid-template-areas: "article1 article1 article1 article2 article2 article2" "article3 article3 article4 article4 article5 article5";
+}
+
+.article__container {
+  height: 100%;
+  padding: 3em;
+  border-radius: 1.5em;
+}
+
+.earlier-articles__articles-wrapper__article {
+  min-height: 450px;
+  max-height: 600px;
+  color: #252530;
+  border-radius: 1.5em;
+}
+
+.earlier-articles__articles-wrapper__article:nth-child(1) {
+  grid-area: article1;
+  background: url("../../../assets/museum.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.earlier-articles__articles-wrapper__article:nth-child(1) .article__container {
+  background-color: rgba(255, 158, 216, 0.8);
+}
+
+.earlier-articles__articles-wrapper__article:nth-child(2) {
+  grid-area: article2;
+  background: url("../../../assets/restaurant3.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.earlier-articles__articles-wrapper__article:nth-child(2) .article__container {
+  background-color: rgba(255, 180, 105, 0.8);
+}
+
+.earlier-articles__articles-wrapper__article:nth-child(3) {
+  grid-area: article3;
+  background: url("../../../assets/furniture.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.earlier-articles__articles-wrapper__article:nth-child(4) {
+  grid-area: article4;
+  background: url("../../../assets/livingroom.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.earlier-articles__articles-wrapper__article:nth-child(4) .article__container {
+  background-color: rgba(255, 180, 105, 0.8);
+}
+
+.earlier-articles__articles-wrapper__article:nth-child(5) {
+  grid-area: article5;
+  background: url("../../../assets/cafe.jpeg");
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.earlier__article__blobs {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+  font-size: 0.8em;
+}
+
+.earlier__article__blobs .blob {
+  border: 1px solid white;
+  padding: 0.3em 1em;
+  border-radius: 1.5em;
+  font-weight: bold;
+}
+
+.dark {
+  color: #252530;
+}
+
+.dark .blob {
+  border: 1px solid #252530;
+}
+
+.earlier-articles__title {
+  font-size: 1em;
+  font-weight: 800;
+  margin: 1em 0;
+}
+
+.earlier-articles__description {
+  font-size: 1.5em;
+  margin: 1em 0;
+}
+
+.earlier-articles__author {
+  font-size: 1.3em;
+  margin: 1em 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #252530;
+}
+
+/*# sourceMappingURL=style.css.map */

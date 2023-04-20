@@ -1,0 +1,82 @@
+@use '../variables/colors.scss' as colors;
+@use '../variables/spacing.scss' as spacing;
+
+.section-1,
+.section-2,
+.section-3 {
+  width: 65%;
+  height: 800px;
+  margin: spacing.$base-margin * 3 auto;
+  border-radius: spacing.$border-radius;
+  background-position: center;
+  background-size: cover;
+}
+
+.section-1 {
+  background-image: url('../../../assets/office.webp');
+  color: colors.$color-white;
+}
+
+.section-2 {
+  background-image: url('../../../assets/restaurant3.jpg');
+  color: colors.$primary-background;
+}
+
+.section-3 {
+  background-image: url('../../../assets/furniture.jpg');
+  color: colors.$color-white;
+}
+
+.section-1__article,
+.section-2__article,
+.section-3__article {
+  height: 100%;
+  border-radius: spacing.$border-radius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-2__article {
+  background-color: rgba($color: colors.$color-yellow, $alpha: 0.8);
+}
+
+.section__article__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 70%;
+}
+
+.section-1__articles__blobs,
+.section-2__articles__blobs,
+.section-3__articles__blobs {
+  display: flex;
+  gap: 1em;
+}
+
+.section-1__articles__blobs div,
+.section-2__articles__blobs div,
+.section-3__articles__blobs div {
+  padding: spacing.$base-padding * 0.5 spacing.$base-padding;
+  border-radius: spacing.$border-radius;
+  font-weight: bold;
+}
+
+.section-1__articles__blobs div,
+.section-3__articles__blobs div {
+  border: 1px solid colors.$color-white;
+}
+
+.section-2__articles__blobs div {
+  border: 1px solid colors.$primary-background;
+}
+
+.section__article__head {
+  font-size: 3.5em;
+  font-weight: 800;
+}
+
+.section__article__author {
+  font-size: 1.5em;
+}

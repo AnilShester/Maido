@@ -1,0 +1,24 @@
+@use '../variables/colors' as colors;
+@use '../variables/spacing.scss' as spacing;
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 5em;
+}
+
+.header__nav img {
+  height: 2.5em;
+}
+
+.header__nav__ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  list-style-type: none;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: colors.$primary-font;
+  letter-spacing: 0.05em;
+}

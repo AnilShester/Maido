@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maido Clone</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <aside class="aside">Thoughts, stories and ideas</aside>
@@ -13,7 +13,7 @@
       <nav class="header__nav">
         <img
           class="header__nav__logo"
-          src="./assets/maido.svg"
+          src="../assets/maido.svg"
           alt="logo of the website"
         />
         <ul class="header__nav__ul">
@@ -31,66 +31,110 @@
 
     <main class="main">
       <article class="main__article">
-        <div class="main__article__pinned blob">PINNED</div>
-        <p class="main__article__author">by James Bryant</p>
-        <h1 class="main__article__title">One space, so many possibilities</h1>
+        <div class="main__article__container">
+          <h3 class="main__article__pinned blob">PINNED</h3>
+          <div class="main__article__info">
+            <p class="main__article__author">by James Bryant</p>
+            <h1 class="main__article__title">
+              One space, so many possibilities
+            </h1>
+          </div>
+        </div>
       </article>
       <article class="main__article">
-        <div class="main__article__pinned blob">PINNED</div>
-        <p class="main__article__author">by Janet Robertson</p>
-        <h2 class="main__article__title">Make the open space open more</h2>
+        <div class="main__article__container">
+          <h3 class="main__article__pinned blob">PINNED</h3>
+          <div class="main__article__info">
+            <p class="main__article__author">by Janet Robertson</p>
+            <h2 class="main__article__title">Make the open space open more</h2>
+          </div>
+        </div>
       </article>
       <article class="main__article">
-        <div class="main__article__pinned blob">PINNED</div>
-        <p class="main__article__author">
-          by Patricia Jenkins and other authors
-        </p>
-        <h2 class="main__article__title">A comfortable spot for everyone</h2>
+        <div class="main__article__container">
+          <h3 class="main__article__pinned blob">PINNED</h3>
+          <div class="main__article__info">
+            <p class="main__article__author">
+              by Patricia Jenkins and other authors
+            </p>
+            <h2 class="main__article__title">
+              A comfortable spot for everyone
+            </h2>
+          </div>
+        </div>
       </article>
       <article class="main__article">
-        <div class="main__article__pinned blob">PINNED</div>
-        <p class="main__article__author">by James Bryant and other authors</p>
-        <h2 class="main__article__title">An open space for open mind</h2>
+        <div class="main__article__container">
+          <h3 class="main__article__pinned blob">PINNED</h3>
+          <div class="main__article__info">
+            <p class="main__article__author">
+              by James Bryant and other authors
+            </p>
+            <h2 class="main__article__title">An open space for open mind</h2>
+          </div>
+        </div>
       </article>
       <article class="main__article">
-        <div class="main__article__pinned blob">PINNED</div>
-        <p class="main__article__author">by Margaret Robertson</p>
-        <h2 class="main__article__title">
-          Anyone can hold the helm when the sea is calm
-        </h2>
+        <div class="main__article__container">
+          <h3 class="main__article__pinned blob">PINNED</h3>
+          <div class="main__article__info">
+            <p class="main__article__author">by Margaret Robertson</p>
+            <h2 class="main__article__title">
+              Anyone can hold the helm when the sea is calm
+            </h2>
+          </div>
+        </div>
       </article>
     </main>
 
     <section class="section-1">
       <article class="section-1__article">
-        <div class="section-1__articles__blobs">
-          <div>CASE STUDY</div>
-          <div>OPEN SPACE</div>
+        <div class="section__article__container">
+          <div class="section-1__articles__blobs">
+            <div>CASE STUDY</div>
+            <div>OPEN SPACE</div>
+          </div>
+          <h2 class="section__article__head">
+            The perfect place that helps you get work done in peace
+          </h2>
+          <h3 class="section__article__author">
+            by Janet Robertson & Margaret Robertson
+          </h3>
         </div>
-        <h2>The perfect place that helps you get work done in peace</h2>
-        <h3>by Janet Robertson & Margaret Robertson</h3>
       </article>
     </section>
 
     <section class="section-2">
       <article class="section-2__article">
-        <div class="section-2__articles__blobs">
-          <div>CASE STUDY</div>
-          <div>OPEN SPACE</div>
+        <div class="section__article__container">
+          <div class="section-2__articles__blobs">
+            <div>CASE STUDY</div>
+            <div>OPEN SPACE</div>
+          </div>
+          <h2 class="section__article__head">
+            The perfect place that helps you get work done in peace
+          </h2>
+          <h3 class="section__article__author">
+            by Janet Robertson & Margaret Robertson
+          </h3>
         </div>
-        <h2>The perfect place that helps you get work done in peace</h2>
-        <h3>by Janet Robertson & Margaret Robertson</h3>
       </article>
     </section>
 
     <section class="section-3">
       <article class="section-3__article">
-        <div class="section-3__articles__blobs">
-          <div>CASE STUDY</div>
-          <div>OPEN SPACE</div>
+        <div class="section__article__container">
+          <div class="section-3__articles__blobs">
+            <div>CASE STUDY</div>
+            <div>OPEN SPACE</div>
+          </div>
+          <h2 class="section__article__head">
+            The perfect place that helps you get work done in peace
+          </h2>
+          <h3 class="section__article__author">
+            by Janet Robertson & Margaret Robertson
+          </h3>
         </div>
-        <h2>The perfect place that helps you get work done in peace</h2>
-        <h3>by Janet Robertson & Margaret Robertson</h3>
       </article>
     </section>
 
@@ -100,66 +144,80 @@
       </h3>
       <div class="articles-wrapper">
         <article class="earlier-articles__articles-wrapper__article">
-          <div class="blobs">
-            <div class="blob">CREATIVE</div>
+          <div class="article__container dark">
+            <div class="earlier__article__blobs dark">
+              <div class="blob">CREATIVE</div>
+            </div>
+            <h4 class="earlier-articles__title dark">
+              Problems are not stop signs
+            </h4>
+            <p class="earlier-articles__description dark">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quo
+              voluptas vero magnam ex error tempora pariatur quod modi? Minima
+              quae velit temporibus quasi tempora in nam ipsum et sint?
+            </p>
+            <h5 class="earlier-articles__author dark">
+              by Margaret Robertson & Patricia Jenkins
+            </h5>
           </div>
-          <h4 class="earlier-articles__title">Problems are not stop signs</h4>
-          <p class="earlier-articles__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quo
-            voluptas vero magnam ex error tempora pariatur quod modi? Minima
-            quae velit temporibus quasi tempora in nam ipsum et sint?
-          </p>
-          <h5 class="earlier-articles__author">
-            by Margaret Robertson & Patricia Jenkins
-          </h5>
         </article>
         <article class="earlier-articles__articles-wrapper__article">
-          <div class="blobs">
-            <div class="blob">CREATIVE</div>
-            <div class="blob">CASE STUDY</div>
-            <div class="blob">OPEN SPACE</div>
+          <div class="article__container dark">
+            <div class="earlier__article__blobs dark">
+              <div class="blob">CREATIVE</div>
+              <div class="blob">CASE STUDY</div>
+              <div class="blob">OPEN SPACE</div>
+            </div>
+            <h4 class="earlier-articles__title dark">
+              Quiet time is the best time
+            </h4>
+            <p class="earlier-articles__description dark"></p>
+            <h5 class="earlier-articles__author dark">by Sean Hamilton</h5>
           </div>
-          <h4 class="earlier-articles__title">Quiet time is the best time</h4>
-          <p class="earlier-articles__description"></p>
-          <h5 class="earlier-articles__author">by Sean Hamilton</h5>
         </article>
         <article class="earlier-articles__articles-wrapper__article">
-          <div class="blobs">
-            <div class="blob">CREATIVE</div>
-            <div class="blob">FURNITURE</div>
+          <div class="article__container">
+            <div class="earlier__article__blobs">
+              <div class="blob">CREATIVE</div>
+              <div class="blob">FURNITURE</div>
+            </div>
+            <h4 class="earlier-articles__title">
+              Being unique is better than being perfect
+            </h4>
+            <p class="earlier-articles__description"></p>
+            <h5 class="earlier-articles__author">by Patricia Jenkins</h5>
           </div>
-          <h4 class="earlier-articles__title">
-            Being unique is better than being perfect
-          </h4>
-          <p class="earlier-articles__description"></p>
-          <h5 class="earlier-articles__author">by Patricia Jenkins</h5>
         </article>
         <article class="earlier-articles__articles-wrapper__article">
-          <div class="blobs">
-            <div class="blob">CASE STUDY</div>
-            <div class="blob">OPEN SPACE</div>
+          <div class="article__container">
+            <div class="earlier__article__blobs dark">
+              <div class="blob">CASE STUDY</div>
+              <div class="blob">OPEN SPACE</div>
+            </div>
+            <h4 class="earlier-articles__title dark">
+              Anyone can hold the helm when the sea is calm
+            </h4>
+            <p class="earlier-articles__description dark">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum,
+              voluptas?
+            </p>
+            <h5 class="earlier-articles__author dark">by Margaret Robertson</h5>
           </div>
-          <h4 class="earlier-articles__title">
-            Anyone can hold the helm when the sea is calm
-          </h4>
-          <p class="earlier-articles__description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum,
-            voluptas?
-          </p>
-          <h5 class="earlier-articles__author">by Margaret Robertson</h5>
         </article>
         <article class="earlier-articles__articles-wrapper__article">
-          <div class="blobs">
-            <div class="blob">PRODUCTIVITY</div>
-            <div class="blob">OPEN SPACE</div>
+          <div class="article__container">
+            <div class="earlier__article__blobs">
+              <div class="blob">PRODUCTIVITY</div>
+              <div class="blob">OPEN SPACE</div>
+            </div>
+            <h4 class="earlier-articles__title">Change is always happening</h4>
+            <p class="earlier-articles__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus, recusandae temporibus. Ipsum eligendi asperiores
+              quasi.
+            </p>
+            <h5 class="earlier-articles__author">by Janet Robertson</h5>
           </div>
-          <h4 class="earlier-articles__title">Change is always happening</h4>
-          <p class="earlier-articles__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus, recusandae temporibus. Ipsum eligendi asperiores
-            quasi.
-          </p>
-          <h5 class="earlier-articles__author">by Janet Robertson</h5>
         </article>
       </div>
     </section>
