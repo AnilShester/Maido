@@ -7,6 +7,7 @@ Responsive design uisng flexbox and grid. Implementing animation and styling usi
 - [Technologies](#technologies)
 - [Project structure](#project-structure)
 - [Results](#results)
+- [Getting Started] (#getting-started)
 
 ## Technologies
 
@@ -57,3 +58,33 @@ Responsive design uisng flexbox and grid. Implementing animation and styling usi
 ```
 
 ## Result
+
+Recreated the Maido website using HTML, CSS and SCSS only.
+
+## Getting Started
+
+Link to the [website] ()
+
+{
+"name": "fs15_2-responsive-design",
+"version": "1.0.0",
+"description": "Responsive design uisng flexbox and grid. Implementing animation and styling using CSS/SASS.",
+"main": "index.js",
+"scripts": {
+"compile": "sass src/styles/style.scss:src/style.css",
+"compile:watch": "sass --watch src/styles/style.scss:src/style.css"
+},
+"repository": {
+"type": "git",
+"url": "git+https://github.com/AnilShester/fs15_2-responsive-design.git"
+},
+"author": "",
+"license": "ISC",
+"bugs": {
+"url": "https://github.com/AnilShester/fs15_2-responsive-design/issues"
+},
+"homepage": "https://github.com/AnilShester/fs15_2-responsive-design#readme",
+"dependencies": {
+"sass": "^1.62.0"
+}
+}
