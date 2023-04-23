@@ -1,0 +1,15 @@
+.aside {
+  font-size: 1.2em;
+  font-weight: var(--font-weight-secondary-extra-bold);
+  line-height: 1.4;
+  position: fixed;
+  z-index: 200;
+  color: white;
+  top: 0;
+  left: 0;
+  font-weight: bold;
+  cursor: default;
+  transform: rotate(-90deg) translate(-100%, -90px);
+  text-align: center;
+  letter-spacing: 1.5px;
+}

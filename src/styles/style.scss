@@ -5,6 +5,9 @@
 @use 'components/main.scss';
 @use 'components/sections.scss';
 @use 'components/earlier-articles.scss';
+@use 'components/social.scss';
+@use 'components/footer';
+@use 'components/aside.scss';
 
 * {
   margin: 0;
@@ -14,6 +17,8 @@
 
 body {
   background-color: colors.$primary-background;
+  width: 90%;
+  margin: auto;
 }
 
 // .subscribe {

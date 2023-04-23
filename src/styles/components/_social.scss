@@ -1,0 +1,83 @@
+@use '../variables/colors.scss' as colors;
+@use '../variables/spacing.scss' as spacing;
+
+.subscribe {
+  width: 50%;
+  margin: 2em auto;
+  text-align: center;
+  padding: 1em;
+
+  & .subscribe__title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    padding: 0.5em 0;
+    color: colors.$color-white;
+    letter-spacing: 0.1em;
+  }
+
+  & .subscribe__typing {
+    font-size: 2em;
+    padding: 0.3em 0;
+    font-weight: bold;
+    color: white;
+    width: fit-content;
+    margin: 0 auto;
+    animation: typing 3s steps(30) infinite alternate, bliking 0.3s alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+  }
+
+  & .subscribe__email {
+    display: block;
+    margin: 1.5em auto;
+    width: 80%;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0.5em 0;
+    background: transparent;
+    color: colors.$color-white;
+    border: none;
+    border-bottom: 1px solid white;
+    transition: width 0.3s linear;
+    &:focus {
+      width: 100%;
+      outline: none;
+    }
+  }
+
+  & .subscribe__button {
+    padding: 2.5em;
+    font-size: 1em;
+    font-weight: 700;
+    color: colors.$color-white;
+    letter-spacing: 0.2em;
+    border-radius: 1em;
+    border: none;
+    background-color: colors.$btn-color;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: colors.$btn-hover-color;
+      color: colors.$btn-color;
+    }
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    border-right: none;
+  }
+  50% {
+    border-right: 1px solid white;
+  }
+}

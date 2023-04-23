@@ -4,12 +4,26 @@
 .header__nav {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  height: 5em;
+  justify-content: space-between;
+  height: 8em;
+
+  & a {
+    text-decoration: none;
+    color: white;
+    &:hover::after {
+      content: '';
+      height: 0.4em;
+      width: 0.4em;
+      border-radius: 50%;
+      background-color: gray;
+      position: absolute;
+    }
+  }
 }
 
 .header__nav img {
   height: 2.5em;
+  cursor: pointer;
 }
 
 .header__nav__ul {
@@ -17,8 +31,23 @@
   align-items: center;
   gap: 1.5em;
   list-style-type: none;
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: 600;
   color: colors.$primary-font;
   letter-spacing: 0.05em;
+  font-size: 1.1em;
+  text-transform: capitalize;
+
+  & li:nth-child(1) {
+    & a {
+      &::after {
+        content: '';
+        height: 0.4em;
+        width: 0.4em;
+        border-radius: 50%;
+        background-color: colors.$color-orange;
+        position: absolute;
+      }
+    }
+  }
 }

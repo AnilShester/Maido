@@ -1,121 +1,188 @@
 @use '../variables/colors.scss' as colors;
 @use '../variables/spacing.scss' as spacing;
+@use '../variables/fonts.scss' as fonts;
 
 .earlier-articles {
-  width: 65%;
-  margin: spacing.$base-margin * 3 auto;
-}
-
-.earlier-articles h3 {
-  text-transform: uppercase;
-  text-align: center;
-  padding: spacing.$base-padding * 2 0;
-  color: colors.$color-white;
-  letter-spacing: spacing.$letter-space;
-}
-
-.articles-wrapper {
-  display: grid;
-  gap: 1em;
-  grid-template-areas:
-    'article1 article1 article1 article2 article2 article2'
-    'article3 article3 article4 article4 article5 article5';
-}
-
-.article__container {
-  height: 100%;
-  padding: spacing.$base-padding * 3;
-  border-radius: spacing.$border-radius;
-}
-
-.earlier-articles__articles-wrapper__article {
-  min-height: 450px;
-  max-height: 600px;
-  color: colors.$primary-background;
-  border-radius: spacing.$border-radius;
-}
-
-.earlier-articles__articles-wrapper__article:nth-child(1) {
-  grid-area: article1;
-  background: url('../../../assets/museum.jpg');
-  background-position: center;
-  background-size: cover;
-}
-.earlier-articles__articles-wrapper__article:nth-child(1) .article__container {
-  background-color: rgba($color: colors.$color-pink, $alpha: 0.8);
-}
-
-.earlier-articles__articles-wrapper__article:nth-child(2) {
-  grid-area: article2;
-  background: url('../../../assets/restaurant3.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
-.earlier-articles__articles-wrapper__article:nth-child(2) .article__container {
-  background-color: rgba($color: colors.$color-orange, $alpha: 0.8);
-}
-
-.earlier-articles__articles-wrapper__article:nth-child(3) {
-  grid-area: article3;
-  background: url('../../../assets/furniture.jpg');
-  background-position: center;
-  background-size: cover;
-  color: colors.$color-white;
-}
-.earlier-articles__articles-wrapper__article:nth-child(4) {
-  grid-area: article4;
-  background: url('../../../assets/livingroom.webp');
-  background-position: center;
-  background-size: cover;
-}
-
-.earlier-articles__articles-wrapper__article:nth-child(4) .article__container {
-  background-color: rgba($color: colors.$color-orange, $alpha: 0.8);
-}
-
-.earlier-articles__articles-wrapper__article:nth-child(5) {
-  grid-area: article5;
-  background: url('../../../assets/cafe.jpeg');
-  background-position: center;
-  background-size: cover;
-  color: colors.$color-white;
-}
-
-.earlier__article__blobs {
+  margin: spacing.$base-margin * 3;
   display: flex;
-  gap: 1em;
-  margin-bottom: spacing.$base-margin;
-  font-size: 0.8em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & h3 {
+    text-transform: uppercase;
+    padding: spacing.$base-padding * 2 0;
+    text-align: center;
+    color: colors.$color-white;
+    letter-spacing: spacing.$letter-space;
+  }
+
+  & .earlier-articles__articles__container {
+    display: grid;
+    gap: 1em;
+    grid-template-areas:
+      'article1 article1 article1 article2 article2 article2'
+      'article3 article3 article4 article4 article5 article5';
+  }
+
+  & article {
+    height: 25em;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 2em;
+    color: white;
+    border-radius: spacing.$border-radius;
+    background-position: center;
+    background-size: 100%;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+
+    & .article__buttons {
+      display: flex;
+      gap: 1em;
+
+      & button {
+        padding: 0.5em 1.2em;
+        text-transform: capitalize;
+        border-radius: spacing.$border-radius;
+        border: 1px solid colors.$color-dark;
+        color: colors.$color-dark;
+        background: transparent;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+        &:hover {
+          background-color: white;
+          border-color: white;
+          color: colors.$color-dark;
+        }
+      }
+    }
+
+    & h3 {
+      text-align: start;
+      padding: 0;
+      font-size: fonts.$h3-small;
+      color: colors.$color-dark;
+    }
+
+    & p {
+      font-size: fonts.$p-medium;
+      color: colors.$color-dark;
+    }
+  }
+
+  & article:hover {
+    background-size: 102%;
+  }
+
+  .load-more {
+    margin: 2em;
+    width: 70%;
+    padding: 1.8em;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: spacing.$border-radius;
+    cursor: pointer;
+    background-color: colors.$btn-color;
+    border: none;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: colors.$btn-hover-color;
+      color: colors.$btn-color;
+    }
+  }
 }
 
-.earlier__article__blobs .blob {
-  border: 1px solid white;
-  padding: spacing.$base-padding * 0.3 spacing.$base-padding;
-  border-radius: spacing.$border-radius;
-  font-weight: bold;
+.earlier-articles__articles__container__article:nth-child(1) {
+  grid-area: article1;
+  background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80'),
+    linear-gradient(
+      90deg,
+      rgba(255, 158, 216, 1) 0%,
+      rgba(255, 158, 216, 1) 48%,
+      rgba(255, 158, 216, 1) 100%
+    );
+  background-blend-mode: soft-light;
+  .article__buttons {
+    & button:hover {
+      color: rgba(255, 158, 216, 1);
+      background-color: colors.$color-dark;
+      border-color: colors.$color-dark;
+    }
+  }
 }
 
-.dark {
-  color: colors.$primary-background;
+.earlier-articles__articles__container__article:nth-child(2) {
+  grid-area: article2;
+  background-image: url('https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'),
+    linear-gradient(
+      90deg,
+      rgb(207, 142, 78) 0%,
+      rgb(207, 142, 78) 0%,
+      rgb(207, 142, 78) 0%
+    );
+  background-blend-mode: soft-light;
+  .article__buttons {
+    & button:hover {
+      color: rgb(207, 142, 78);
+      background-color: colors.$color-dark;
+      border-color: colors.$color-dark;
+    }
+  }
 }
 
-.dark .blob {
-  border: 1px solid colors.$primary-background;
+.earlier-articles__articles__container__article:nth-child(3) {
+  grid-area: article3;
+  background-image: url('https://images.unsplash.com/photo-1486946255434-2466348c2166?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'),
+    linear-gradient(rgba(0, 0, 0, 0.402), #22211e80);
+  background-blend-mode: soft-light;
+  .article__buttons {
+    & button {
+      color: white;
+      border-color: white;
+    }
+  }
+  & p,
+  h3 {
+    color: white;
+  }
+}
+.earlier-articles__articles__container__article:nth-child(4) {
+  grid-area: article4;
+  background-image: url('https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80'),
+    linear-gradient(
+      90deg,
+      rgba(226, 121, 98, 1) 100%,
+      rgba(207, 136, 3, 1) 100%
+    );
+  background-blend-mode: soft-light;
+  .article__buttons {
+    & button:hover {
+      color: rgba(226, 121, 98, 1);
+      background-color: colors.$color-dark;
+      border-color: colors.$color-dark;
+    }
+  }
 }
 
-.earlier-articles__title {
-  font-size: 1em;
-  font-weight: 800;
-  margin: spacing.$base-margin 0;
-}
-
-.earlier-articles__description {
-  font-size: 1.5em;
-  margin: spacing.$base-margin 0;
-}
-
-.earlier-articles__author {
-  font-size: 1.3em;
-  margin: spacing.$base-margin 0;
+.earlier-articles__articles__container__article:nth-child(5) {
+  grid-area: article5;
+  background-image: url('https://images.unsplash.com/photo-1506377295352-e3154d43ea9e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'),
+    linear-gradient(rgba(0, 0, 0, 0.402), #22211e80);
+  background-blend-mode: soft-light;
+  .article__buttons {
+    & button {
+      color: white;
+      border-color: white;
+    }
+  }
+  & p,
+  h3 {
+    color: white;
+  }
 }

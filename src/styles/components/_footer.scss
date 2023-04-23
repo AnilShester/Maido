@@ -1,0 +1,79 @@
+@use '../variables/colors.scss' as colors;
+@use '../variables/spacing.scss' as spacing;
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 5em;
+
+  & .footer__header {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding-bottom: 3em;
+    color: white;
+
+    & h3 a {
+      color: grey;
+      text-decoration: none;
+    }
+
+    & .footer__header__ul {
+      display: flex;
+      gap: 1em;
+      list-style-type: none;
+      font-size: 1.2em;
+      font-weight: 700;
+
+      & a {
+        text-decoration: none;
+        color: white;
+        font-size: 0.8em;
+      }
+
+      & a {
+        &:hover::after {
+          content: '';
+          height: 0.3em;
+          width: 0.3em;
+          border-radius: 50%;
+          background-color: gray;
+          position: absolute;
+        }
+      }
+
+      & li:nth-child(1) {
+        & a {
+          &::after {
+            content: '';
+            height: 0.4em;
+            width: 0.4em;
+            border-radius: 50%;
+            background-color: colors.$color-orange;
+            position: absolute;
+          }
+        }
+      }
+    }
+
+    & .footer__header__copyright {
+      letter-spacing: 0.1em;
+      font-size: 0.8em;
+      color: grey;
+    }
+  }
+
+  & .footer__social {
+    display: flex;
+    gap: 2em;
+    height: 30px;
+  }
+  & i {
+    font-size: 2em;
+    color: white;
+    &:hover {
+      color: colors.$color-orange;
+    }
+  }
+}

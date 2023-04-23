@@ -1,82 +1,117 @@
 @use '../variables/colors.scss' as colors;
 @use '../variables/spacing.scss' as spacing;
+@use '../variables/fonts.scss' as fonts;
 
-.section-1,
-.section-2,
-.section-3 {
-  width: 65%;
-  height: 800px;
-  margin: spacing.$base-margin * 3 auto;
-  border-radius: spacing.$border-radius;
-  background-position: center;
-  background-size: cover;
-}
-
-.section-1 {
-  background-image: url('../../../assets/office.webp');
-  color: colors.$color-white;
-}
-
-.section-2 {
-  background-image: url('../../../assets/restaurant3.jpg');
-  color: colors.$primary-background;
-}
-
-.section-3 {
-  background-image: url('../../../assets/furniture.jpg');
-  color: colors.$color-white;
-}
-
-.section-1__article,
-.section-2__article,
-.section-3__article {
-  height: 100%;
-  border-radius: spacing.$border-radius;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.section-2__article {
-  background-color: rgba($color: colors.$color-yellow, $alpha: 0.8);
-}
-
-.section__article__container {
+.articles {
   display: flex;
   flex-direction: column;
-  gap: 2em;
-  width: 70%;
-}
+  gap: 3em;
+  padding: 2em;
+  justify-content: center;
+  align-items: center;
 
-.section-1__articles__blobs,
-.section-2__articles__blobs,
-.section-3__articles__blobs {
-  display: flex;
-  gap: 1em;
-}
+  & article {
+    height: 40em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: spacing.$border-radius;
+    background-position: center;
+    padding: 10em;
+    background-size: 100%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    & .article__btns {
+      align-self: self-start;
+      display: flex;
+      gap: 2em;
+      padding: 2em 0;
 
-.section-1__articles__blobs div,
-.section-2__articles__blobs div,
-.section-3__articles__blobs div {
-  padding: spacing.$base-padding * 0.5 spacing.$base-padding;
-  border-radius: spacing.$border-radius;
-  font-weight: bold;
-}
+      & button {
+        padding: 0.5em 1em;
+        border-radius: spacing.$border-radius;
+        border: 1px solid white;
+        background-color: transparent;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
 
-.section-1__articles__blobs div,
-.section-3__articles__blobs div {
-  border: 1px solid colors.$color-white;
-}
+      & button:hover {
+        background-color: white;
+        color: colors.$color-dark;
+      }
+    }
 
-.section-2__articles__blobs div {
-  border: 1px solid colors.$primary-background;
-}
+    & .article__content {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      color: white;
 
-.section__article__head {
-  font-size: 3.5em;
-  font-weight: 800;
-}
+      & h2 {
+        font-size: fonts.$h2-medium;
 
-.section__article__author {
-  font-size: 1.5em;
+        & i {
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility, opacity 0.5s ease-in-out;
+        }
+      }
+
+      & h2:hover {
+        & i {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      & h3 {
+        font-size: fonts.$h3-small;
+      }
+    }
+  }
+
+  & .article:nth-child(1) {
+    background-image: url('https://plus.unsplash.com/premium_photo-1667823753540-09e632d4fc81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'),
+      linear-gradient(rgba(0, 0, 0, 0.402), #22211e80);
+  }
+
+  & .article:nth-child(2) {
+    background-image: url(../../../assets/livingroom.webp),
+      linear-gradient(
+        90deg,
+        rgba(226, 190, 98, 1) 100%,
+        rgba(207, 136, 3, 1) 100%
+      );
+
+    background-blend-mode: soft-light;
+
+    & .article__btns button {
+      color: colors.$article-font;
+      border-color: colors.$article-font;
+    }
+
+    & .article__btns button:hover {
+      background-color: colors.$color-dark;
+      color: #f2c94c;
+    }
+
+    & .article__content {
+      color: colors.$article-font;
+    }
+  }
+  & .article:nth-child(3) {
+    background-image: url(../../../assets/museum.jpg),
+      linear-gradient(rgba(0, 0, 0, 0.402), #22211e80);
+
+    background-blend-mode: overlay;
+  }
+
+  & article:hover {
+    //transform: scale(1.2);
+    background-size: 105%;
+  }
 }

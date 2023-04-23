@@ -4,12 +4,56 @@
 .main {
   display: grid;
   gap: 1em;
-  width: 80%;
   margin: spacing.$base-margin * 4 auto;
-
   grid-template-areas:
     'item1 item1 item2 item3'
     'item1 item1 item4 item5';
+
+  & .main__article {
+    min-height: 15em;
+    border-radius: spacing.$border-radius;
+  }
+
+  & .main__article:nth-child(1) {
+    grid-area: item1;
+    background: url(../assets/livingroom.webp);
+    background-position: center;
+    background-size: cover;
+  }
+  & .main__article:nth-child(2) {
+    grid-area: item2;
+    background: url(../assets/basketball.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  & .main__article:nth-child(3) {
+    grid-area: item3;
+    background: url(../assets/workspace.webp);
+    background-position: top;
+    background-size: cover;
+
+    & .main__article__pinned {
+      background-color: colors.$color-dark;
+      color: rgba($color: colors.$color-orange, $alpha: 0.8);
+    }
+  }
+
+  & .main__article:nth-child(4) {
+    grid-area: item4;
+    background: url(../assets/furniture.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  & .main__article:nth-child(5) {
+    grid-area: item5;
+    background: url(../assets/museum.jpg);
+    background-position: center;
+    background-size: cover;
+    & .main__article__pinned {
+      background-color: colors.$color-dark;
+      color: rgba($color: colors.$color-pink, $alpha: 0.8);
+    }
+  }
 }
 
 .main__article__container {
@@ -20,39 +64,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
 
-.main__article:nth-child(1) {
-  grid-area: item1;
-  background: url(../assets/livingroom.webp);
-  background-position: center;
-  background-size: cover;
-}
-
-.main__article:nth-child(2) {
-  grid-area: item2;
-  background: url(../assets/basketball.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.main__article:nth-child(3) {
-  grid-area: item3;
-  background: url(../assets/workspace.webp);
-  background-position: top;
-  background-size: cover;
-}
-.main__article:nth-child(4) {
-  grid-area: item4;
-  background: url(../assets/furniture.jpg);
-  background-position: center;
-  background-size: cover;
-}
-.main__article:nth-child(5) {
-  grid-area: item5;
-  background: url(../assets/museum.jpg);
-  background-position: center;
-  background-size: cover;
+  & .main__article__pinned {
+    padding: 0.7em 1.5em;
+    color: colors.$article-font;
+    background-color: white;
+    font-size: 0.7em;
+    width: fit-content;
+    border-radius: spacing.$border-radius;
+    letter-spacing: spacing.$letter-space;
+    font-weight: bold;
+  }
 }
 
 .main__article:nth-child(2) .main__article__container {
@@ -60,6 +82,7 @@
 }
 .main__article:nth-child(3) .main__article__container {
   background-color: rgba($color: colors.$color-orange, $alpha: 0.8);
+  color: colors.$color-dark;
 }
 
 .main__article:nth-child(4) .main__article__container {
@@ -68,31 +91,16 @@
 
 .main__article:nth-child(5) .main__article__container {
   background-color: rgba($color: colors.$color-pink, $alpha: 0.8);
-}
-
-.main__article {
-  min-height: 250px;
-  border-radius: spacing.$border-radius;
-  //   padding: spacing.$base-padding * 2;
-}
-.main__article__pinned {
-  padding: 0.7em 1.5em;
-  color: colors.$article-font;
-  background-color: colors.$color-white;
-  font-size: 0.7em;
-  width: fit-content;
-  border-radius: spacing.$border-radius;
-  letter-spacing: spacing.$letter-space;
-  font-weight: bold;
+  color: colors.$color-dark;
 }
 
 .main__article__author {
   font-size: 1.1em;
-  visibility: hidden;
+  // visibility: hidden;
 }
 
 .main__article__title {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: bold;
 }
 
