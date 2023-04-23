@@ -16,19 +16,19 @@
 
   & .main__article:nth-child(1) {
     grid-area: item1;
-    background: url(../assets/livingroom.webp);
+    background: url('https://images.unsplash.com/photo-1567016546367-c27a0d56712e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
     background-position: center;
     background-size: cover;
   }
   & .main__article:nth-child(2) {
     grid-area: item2;
-    background: url(../assets/basketball.jpg);
+    background: url('https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=658&q=80');
     background-position: center;
     background-size: cover;
   }
   & .main__article:nth-child(3) {
     grid-area: item3;
-    background: url(../assets/workspace.webp);
+    background: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=780&q=80');
     background-position: top;
     background-size: cover;
 
@@ -40,13 +40,13 @@
 
   & .main__article:nth-child(4) {
     grid-area: item4;
-    background: url(../assets/furniture.jpg);
+    background: url('https://images.unsplash.com/photo-1610123172705-a57f116cd4d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
     background-position: center;
     background-size: cover;
   }
   & .main__article:nth-child(5) {
     grid-area: item5;
-    background: url(../assets/museum.jpg);
+    background: url('https://images.unsplash.com/photo-1563786785330-2ad8162ef53a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
     background-position: center;
     background-size: cover;
     & .main__article__pinned {
