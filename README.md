@@ -63,7 +63,7 @@ Recreated the Maido website using HTML, CSS and SCSS only.
 
 ## Getting Started
 
-Link to the [website] ()
+Link to the [website] (https://astounding-licorice-9e8632.netlify.app/)
 
 {
 "name": "fs15_2-responsive-design",
